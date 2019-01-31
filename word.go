@@ -3,27 +3,26 @@ package main
 import "fmt"
 
 func main() {
-   var a bool = true
-   var b bool = false
-   if ( a && b ) {
-      fmt.Printf("第一行 - 条件为 true\n" )
-   }else{
-      fmt.Printf("第一行 - 条件未 False\n")
-   }
-   if ( a || b ) {
-      fmt.Printf("第二行 - 条件为 true\n" )
-   }
-   /* 修改 a 和 b 的值 */
-   a = false
-   b = true
-   if ( a && b ) {
-      fmt.Printf("第三行 - 条件为 true\n" )
+   /* 定义局部变量 */
+   var a int = 100
+   var b int = 200
+   var ret int
+
+   /* 调用函数并返回最大值 */
+   ret = max(a, b)
+
+   fmt.Printf( "最大值是 : %d\n", ret )
+}
+
+/* 函数返回两个数的最大值 */
+func max(num1, num2 int) int {
+   /* 定义局部变量 */
+   var result int
+
+   if (num1 > num2) {
+      result = num1
    } else {
-      fmt.Printf("第三行 - 条件为 false\n" )
+      result = num2
    }
-   if ( !(a && b) ) {
-      fmt.Printf("第四行 - 条件为 true\n" )
-   }else{
-      fmt.Printf("第四行 - 条件为 False\n")
-   }
+   return result 
 }
