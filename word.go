@@ -23,5 +23,7 @@ func main() {
    }
    if ( !(a && b) ) {
       fmt.Printf("第四行 - 条件为 true\n" )
+   }else{
+      fmt.Printf("第四行 - 条件为 False\n")
    }
 }
